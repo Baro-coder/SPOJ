@@ -1,0 +1,48 @@
+test 1
+OPT: I | VAL: 5
+OPT: I | VAL: 8
+OPT: I | VAL: 3
+OPT: I | VAL: 4
+OPT: I | VAL: 7
+OPT: R | VAL: 1
+OPT: I | VAL: 1
+OPT: R | VAL: 2
+OPT: S | VAL: 7
+OPT: S | VAL: 6
+OPT: N | VAL: 3
+OPT: D | VAL: 8
+OPT: R | VAL: 0
+test 2
+OPT: I | VAL: 4
+OPT: I | VAL: 2
+OPT: R | VAL: 0
+OPT: D | VAL: 2
+OPT: X | VAL: 1
+OPT: X | VAL: 0
+OPT: I | VAL: 1
+OPT: X | VAL: 0
+OPT: X | VAL: 0
+OPT: X | VAL: 1
+test 3
+OPT: I | VAL: 4
+OPT: P | VAL: 1
+OPT: I | VAL: 1
+OPT: R | VAL: 1
+OPT: I | VAL: 2
+OPT: I | VAL: 5
+OPT: R | VAL: 0
+OPT: D | VAL: 2
+OPT: I | VAL: 2
+OPT: P | VAL: 1
+test 4
+OPT: I | VAL: 3
+OPT: X | VAL: 0
+OPT: I | VAL: 2
+OPT: D | VAL: 3
+OPT: I | VAL: 1
+OPT: I | VAL: 5
+OPT: I | VAL: 4
+OPT: D | VAL: 4
+OPT: I | VAL: 4
+OPT: D | VAL: 4
+OPT: X | VAL: 1
