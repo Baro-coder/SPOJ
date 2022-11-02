@@ -13,6 +13,8 @@
 Repozytorium dla moich propozycji rozwiązań problemów
 opisanych w serwisie **SPOJ**.
 
+Link do mojego profilu SPOJ [tutaj](https://pl.spoj.com/users/bszyk00/).
+
 ---
 
 ## Struktura repozytorium

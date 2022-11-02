@@ -1,6 +1,20 @@
 # ***TBDW - Binarne Drzewa Wyszukiwawcze***
 
-## [Link do zadania](https://pl.spoj.com/problems/TBDW/)
+### *Data dodania zadania:* **2005-06-05**
+
+### *Zadanie dodane przez:* [**mima**](https://pl.spoj.com/users/mima)
+
+### [Link do zadania...](https://pl.spoj.com/problems/TBDW/)
+
+---
+
+## **Limity**
+
+### *Limit czasu wykonania:* ***5s***
+
+### *Limit długości kodu źródłowego:* ***50000B***
+
+### *Limit pamięci:* ***1536MB***
 
 ---
 
