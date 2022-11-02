@@ -1,10 +1,13 @@
+// Libraries
 #include <iostream>
 #include <fstream>
 
-// Streams to redirect standard input / output
+// Namespace std
+using namespace std;
+
+// Files as redirections for streams of standard input / output
 const char * stream_in  = "./data/tbdw.in";
 const char * stream_out = "./data/tbdw.out";
-
 
 // Tree Node Structure
 struct Node {
@@ -195,7 +198,7 @@ void inorderTraversal(Node *node)
     if (node->left != NULL) 
         inorderTraversal(node->left);
 
-    std::cout << node->val << " ";
+    cout << node->val << " ";
 
     // Check right subtree
     if (node->right != NULL)
@@ -205,7 +208,7 @@ void inorderTraversal(Node *node)
 // VLR - Visited, Left, Right
 void preorderTraversal(Node *node)
 {
-    std::cout << node->val << " ";
+    cout << node->val << " ";
 
     // Check left subtree
     if (node->left != NULL)
@@ -227,7 +230,7 @@ void postorderTraversal(Node *node)
     if (node->right != NULL)
         inorderTraversal(node->right);
 
-    std::cout << node->val << " ";
+    cout << node->val << " ";
 }
 
 
@@ -248,9 +251,9 @@ Node *execute(Node *root, char opt, int arg)
         case 'S':
             node = searchNode(root, arg);
             if (node != NULL)
-                std::cout << node->val << std::endl;
+                cout << node->val << endl;
             else
-                std::cout << "-" << std::endl;
+                cout << "-" << endl;
             break;
         case 'X':
             if (arg == 0)
@@ -259,21 +262,21 @@ Node *execute(Node *root, char opt, int arg)
                 node = findMaxNode(root);
             
             if (node != NULL)
-                std::cout << node->val << std::endl;
+                cout << node->val << endl;
             break;
         case 'N':
             node = findNextNode(root, arg);
             if (node != NULL)
-                std::cout << node->val << std::endl;
+                cout << node->val << endl;
             else
-                std::cout << "-" << std::endl;
+                cout << "-" << endl;
             break;
         case 'P':
             node = findPrevNode(root, arg);
             if (node != NULL)
-                std::cout << node->val << std::endl;
+                cout << node->val << endl;
             else
-                std::cout << "-" << std::endl;
+                cout << "-" << endl;
             break;
         case 'R':
             if (arg == 0){
@@ -285,10 +288,7 @@ Node *execute(Node *root, char opt, int arg)
             else if (arg == 2){
                 postorderTraversal(root);
             }
-            std::cout << std::endl;
-            break;
-        default:
-            std::cout << "-" << std::endl;
+            cout << endl;
             break;
     }
     
@@ -298,48 +298,49 @@ Node *execute(Node *root, char opt, int arg)
 // -- Test Solver
 void solveTest(int testInd)
 {
-    std::cout << "test " << testInd << std::endl;
+    cout << "test " << testInd << endl;
 
     // -- tree's root
     Node * root = NULL;
 
     // -- operations count
     int n;
-    std::cin >> n;
+    cin >> n;
 
     for (int i = 0; i < n; i++)
     {
         // -- get operation type and its argument
         char opt = '\0';
         int arg = 0;
-        std::cin >> opt >> arg;
+        cin >> opt >> arg;
 
         // -- execute operation
         root = execute(root, opt, arg);
     }
 }
 
-
 // -- DRIVER --
 int main()
-{
-    // Change I/O streams
-    // -- new I/O sources
-    std::ifstream in(stream_in);
-    std::ofstream out(stream_out);
+{ 
+    // Change I/O streams source/destination
+    // -- new input source
+    ifstream in(stream_in);
+
+    // -- new output destination
+    ofstream out(stream_out);
 
     // -- optional performance optimizations
-    std::ios_base::sync_with_stdio(false);
-    std::cin.tie(0);
+    ios_base::sync_with_stdio(false);
+    cin.tie(0);
 
     // -- redirect I/O streams
-    std::cin.rdbuf(in.rdbuf());
-    std::cout.rdbuf(out.rdbuf());
+    cin.rdbuf(in.rdbuf());
+    cout.rdbuf(out.rdbuf());
 
     // Main program
     // -- tests count
     int t = 0;
-    std::cin >> t;
+    cin >> t;
     for (int i = 0; i < t; i++)
     {
         solveTest(i+1);
